@@ -61,6 +61,12 @@ collections:
           - {label: TitleDescription, name: titleDescription, widget: string}
           - {label: ContinuousLearning, name: continuousLearning, widget: object, fields: [{label: ParagraphOne, name: partOne, widget: text}, {label: ParagraphTwo, name: partTwo, widget: text}, {label: ParagraphThree, name: partThree, widget: text}]}
           - {label: Ambient, name: ambient, widget: object, fields: [{label: ParagraphOne, name: partOne, widget: text}, {label: ParagraphTwo, name: partTwo, widget: text}, {label: ParagraphThree, name: partThree, widget: text}]}
+      - file: "src/pages/preguntas-frecuentes/index.md"
+        label: "Preguntas Frecuentes"
+        name: "preguntas-frecuentes"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "preguntas-frecuentes"}
+          - {label: Title, name: title, widget: string}
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
