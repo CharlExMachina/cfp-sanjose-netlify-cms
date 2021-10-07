@@ -23,9 +23,30 @@ export const IndexPageTemplate = ({
 }) => {
   const getImages = () => {
     return [
-      <img src={carouselImageOne.childImageSharp.fluid.src} alt="" />,
-      <img src={carouselImageTwo.childImageSharp.fluid.src} alt="" />,
-      <img src={carouselImageThree.childImageSharp.fluid.src} alt="" />,
+      <img
+        src={
+          carouselImageOne.childImageSharp
+            ? carouselImageOne.childImageSharp.fluid.src
+            : carouselImageOne
+        }
+        alt=""
+      />,
+      <img
+        src={
+          carouselImageTwo.childImageSharp
+            ? carouselImageTwo.childImageSharp.fluid.src
+            : carouselImageTwo
+        }
+        alt=""
+      />,
+      <img
+        src={
+          carouselImageThree.childImageSharp
+            ? carouselImageThree.childImageSharp.fluid.src
+            : carouselImageThree
+        }
+        alt=""
+      />,
     ];
   };
 
