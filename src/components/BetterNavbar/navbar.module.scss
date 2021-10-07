@@ -1,0 +1,145 @@
+@import "../../css/_base/base.module";
+
+@keyframes open {
+	from {
+		right: -1000px;
+	}
+	to {
+		right: 0;
+	}
+}
+
+.navbar {
+	position: fixed;
+	height: 88px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 100;
+	background: rgba(255, 255, 255, 0.95);
+	box-shadow: 0px 4px 12px rgba(238, 238, 238, 0.75);
+	backdrop-filter: blur(22px);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	& a {
+		text-decoration: none;
+		font-size: 18px;
+	}
+
+	& img {
+		width: 220px;
+	}
+
+	& img:nth-child(3) {
+		height: 84px;
+		width: 65px;
+	}
+
+	& ul {
+		list-style: none;
+		display: flex;
+		width: 60%;
+		justify-content: center;
+		margin-right: 32px;
+
+		& li {
+			padding-top: 5px;
+		}
+
+		& li > a {
+			padding-left: 16px;
+			padding-right: 16px;
+			padding-top: auto;
+		}
+	}
+}
+
+.mobileNav {
+	position: fixed;
+	height: 60px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 100;
+	background: rgba(255, 255, 255, 0.95);
+	box-shadow: 0px 4px 12px rgba(238, 238, 238, 0.75);
+	backdrop-filter: blur(22px);
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	& img {
+		width: 50px;
+		height: 50px;
+		padding-right: 16px;
+	}
+}
+
+.sideNav {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 85%;
+	right: 0;
+	z-index: 200;
+
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: 0px 4px 12px rgba(238, 238, 238, 0.75);
+	backdrop-filter: blur(22px);
+
+	& a {
+		text-decoration: none;
+		font-size: 18px;
+	}
+
+	& img.closeNavbar {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		right: 16px;
+		top: 16px;
+	}
+
+	& .sideNavLogos {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		& img {
+			width: 130px;
+		}
+
+		& img:nth-child(1) {
+			width: 250px;
+		}
+	}
+
+	& ul {
+		list-style: none;
+		padding-left: 0;
+		padding-top: 64px;
+	}
+
+	& li {
+		text-align: center;
+		text-decoration: none;
+		font-size: 20px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+	animation-name: open;
+	animation-duration: 0.4s;
+}
+
+.overlay {
+	position: fixed;
+	z-index: 100;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,25 @@
+@import "../../css/_base/base.module";
+
+.header {
+	width: 42%;
+
+	& h2 {
+		padding-left: 32px;
+		margin-bottom: 16px;
+	}
+
+	& p {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+
+	@include breakpoint-max($screen-s) {
+		width: 100%;
+	}
+}
+
+.large {
+	@include breakpoint-min($screen-m) {
+		width: 50% !important;
+	}
+}

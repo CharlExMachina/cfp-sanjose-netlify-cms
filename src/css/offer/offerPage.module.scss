@@ -1,0 +1,46 @@
+@import "../../css/_base/base.module";
+
+.coursesHeader {
+	& h3 {
+		padding-left: 32px;
+		padding-right: 32px;
+		margin-bottom: 16px;
+	}
+}
+
+.designClass {
+	& h4 {
+		padding-left: 32px;
+	}
+
+	& ul {
+		margin-left: 32px;
+	}
+}
+
+.autocad {
+	& h4 {
+		padding-left: 32px;
+	}
+
+	& ul {
+		margin-left: 32px;
+	}
+}
+
+.designClassContent {
+	display: flex;
+	justify-content: space-between;
+
+	& img {
+		width: 45%;
+	}
+
+	@include breakpoint-max($screen-s) {
+		flex-direction: column;
+
+		& img {
+			width: 100%;
+		}
+	}
+}

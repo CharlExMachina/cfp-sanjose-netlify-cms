@@ -1,0 +1,43 @@
+@import "../../css/_base/base.module";
+
+.card {
+	border: 1px solid #eeeeee;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 12px rgba(238, 238, 238, 0.75);
+	border-radius: 8px;
+	margin-right: 32px;
+	margin-left: 32px;
+	flex: 1;
+
+	& h3 {
+		padding-left: 32px;
+		margin-bottom: 16px;
+	}
+
+	& p {
+		padding-top: 16px;
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+
+	& button {
+		margin-left: 32px;
+		margin-bottom: 32px;
+		margin-top: 16px;
+	}
+
+	& img {
+		height: 181px;
+		object-fit: cover;
+		object-position: 0 -50px;
+
+		@include breakpoint-min(1900px) {
+			object-position: 0 -130px;
+			height: 300px;
+		}
+	}
+
+	@include breakpoint-max($screen-s) {
+		margin-bottom: 32px;
+	}
+}

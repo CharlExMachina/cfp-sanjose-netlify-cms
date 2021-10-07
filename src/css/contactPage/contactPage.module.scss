@@ -1,0 +1,103 @@
+@import "../../css/_base/base.module";
+
+.contactHeader {
+	& h2 {
+		padding-left: 32px;
+		padding-right: 32px;
+		margin-bottom: 16px;
+	}
+
+	& p {
+		padding-left: 32px;
+	}
+}
+
+.submitForm {
+	& button {
+		position: relative;
+		right: 32px;
+		font-size: 18px;
+	}
+}
+
+.contactForm {
+	display: flex;
+
+	@include breakpoint-max($screen-s) {
+		flex-direction: column;
+	}
+
+	& section {
+		padding-left: 32px;
+		padding-right: 32px;
+		padding-bottom: 64px;
+	}
+
+	& section:nth-child(1) {
+		flex: 0.5;
+	}
+
+	& section:nth-child(2) {
+		flex: 0.5;
+	}
+
+	& input,
+	& textarea,
+	& select {
+		/* Neutral/White */
+
+		background: #ffffff;
+		/* Neutral - Gray/300 */
+
+		border: 1px solid #e0e0e0;
+		box-sizing: border-box;
+		border-radius: 8px;
+
+		padding: 16px 8px;
+
+		/* Inside Auto Layout */
+
+		flex: none;
+		order: 0;
+		align-self: stretch;
+		flex-grow: 1;
+		margin: 0px 0px;
+
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	& textarea {
+		resize: none;
+	}
+}
+
+.nameEmail {
+	display: flex;
+	width: 100%;
+
+	@include breakpoint-max($screen-s) {
+		flex-direction: column;
+	}
+
+	& div {
+		padding-right: 16px;
+	}
+
+	& input {
+		margin-right: 80px;
+	}
+
+	& input[type="text"] {
+		width: 100%;
+	}
+
+	& input[type="email"] {
+		width: 100%;
+	}
+}
+
+.formField {
+	display: flex;
+	flex-direction: column;
+}

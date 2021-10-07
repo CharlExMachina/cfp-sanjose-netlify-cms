@@ -1,0 +1,9 @@
+@import "../../css/_base/base.module";
+
+hr {
+	height: 2px;
+	margin-left: 32px;
+	margin-right: 120px;
+	background-color: $green;
+	border: none;
+}

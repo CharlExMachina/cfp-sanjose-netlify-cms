@@ -1,0 +1,66 @@
+@import "../_base/base.module";
+
+.carouselContainer {
+	position: absoute;
+	top: 0px;
+	width: 50%;
+	height: 100%;
+
+	@include breakpoint-max($screen-s) {
+		width: 100%;
+	}
+}
+
+.hero {
+	display: flex;
+
+	& h2 {
+		padding-left: 32px;
+		margin-bottom: 16px;
+	}
+
+	& p {
+		padding-left: 32px;
+		padding-right: 72px;
+	}
+
+	& button {
+		margin-left: 32px;
+		margin-top: 16px;
+	}
+
+	@include breakpoint-max($screen-s) {
+		flex-direction: column;
+	}
+}
+
+.missionContent {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 32px;
+
+	@include breakpoint-max($screen-s) {
+		flex-direction: column;
+	}
+}
+
+.subjectsContent {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	gap: 32px;
+	padding-right: 64px;
+	padding-left: 40px;
+
+	@include breakpoint-max($screen-s) {
+		grid-template-columns: 100%;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+
+.subjectsCta {
+	display: flex;
+	justify-content: center;
+	padding-top: 32px;
+	padding-bottom: 64px;
+}

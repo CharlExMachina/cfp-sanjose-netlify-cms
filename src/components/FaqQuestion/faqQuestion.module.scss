@@ -1,0 +1,17 @@
+@import "../../css/_base/base.module";
+
+.faq {
+	padding-top: 40px;
+
+	& strong {
+		padding-left: 32px;
+		font-size: 20px;
+	}
+
+	& p {
+		padding-left: 32px;
+		padding-right: 32px;
+		font-size: 18px;
+		color: rgb(91, 91, 91);
+	}
+}
