@@ -1,7 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/BetterLayout'
+import {Layout} from '../components/BetterLayout'
+import { SectionHeader } from '../components/SectionHeader'
+import { Separator } from '../components/Separator'
+
+import * as styles from "../css/aboutPage/aboutPage.module.scss";
 
 export const AboutPageTemplate = ({ title, titleDescription, continuousLearning, ambient  }) => {
   return (
