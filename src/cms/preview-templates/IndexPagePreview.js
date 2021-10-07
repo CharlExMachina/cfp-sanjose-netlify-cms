@@ -8,14 +8,15 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   if (data) {
     return (
       <IndexPageTemplate
-        image={getAsset(data.image)}
         title={data.title}
         mission={data.mission}
         vision={data.vision}
-        carouselImageOne={getAsset(data.carouselImageOne)}
-        carouselImageTwo={getAsset(data.carouselImageTwo)}
-        carouselImageThree={getAsset(data.carouselImageThree)}
         titleDescription={data.titleDescription}
+        academicOffer={data.academicOffer}
+        subjectWebDesign={data.subjectWebDesign}
+        subjectBeauty={data.subjectBeauty}
+        subjectElectricity={data.subjectElectricity}
+        subjectOffice={data.subjectOffice}
       />
     );
   } else {

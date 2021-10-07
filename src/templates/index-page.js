@@ -15,126 +15,96 @@ import * as styles from "../css/homePage/homePage.module.scss";
 export const IndexPageTemplate = ({
   title,
   titleDescription,
-  carouselImageOne,
-  carouselImageTwo,
-  carouselImageThree,
   mission,
   vision,
+  academicOffer,
+  subjectWebDesign,
+  subjectBeauty,
+  subjectElectricity,
+  subjectOffice
 }) => {
   const getImages = () => {
     return [
-      <img
-        src={
-          carouselImageOne.childImageSharp
-            ? carouselImageOne.childImageSharp.fluid.src
-            : carouselImageOne
-        }
-        alt=""
-      />,
-      <img
-        src={
-          carouselImageTwo.childImageSharp
-            ? carouselImageTwo.childImageSharp.fluid.src
-            : carouselImageTwo
-        }
-        alt=""
-      />,
-      <img
-        src={
-          carouselImageThree.childImageSharp
-            ? carouselImageThree.childImageSharp.fluid.src
-            : carouselImageThree
-        }
-        alt=""
-      />,
+      <img src="/img/home/carousel/carousel-1.jpg" alt="" />,
+      <img src="/img/home/carousel/carousel-2.jpg" alt="" />,
+      <img src="/img/home/carousel/carousel-3.jpg" alt="" />,
     ];
   };
 
   return (
-    <main>
-      <title>Home Page</title>
-      <section className={styles.hero}>
-        <div className={styles.carouselContainer}>
-          <Carousel images={getImages()} />
-        </div>
-        <div>
-          <h2>{title}</h2>
-          <Separator />
-          <p>{titleDescription}</p>
-          <button onClick={() => navigate("/oferta-academica")}>
-            Explorar oferta académica
-          </button>
-        </div>
-      </section>
-      <section>
-        <SectionHeader header="Misión y Visión" />
-      </section>
-      <section>
-        <div className={styles.missionContent}>
-          <InfoCard
-            cardImage={<img src="img/home/mission/info-mission.jpg" />}
-            title={mission.title}
-            content={mission.content}
-            callToActionTitle="Contáctanos"
-            callToActionRoute="/contacto"
-          />
-          <InfoCard
-            cardImage={<img src="img/home/mission/info-vision.jpg"></img>}
-            title={vision.title}
-            content={vision.content}
-            callToActionTitle="Aprender más"
-            callToActionRoute="/quienes-somos"
-          />
-        </div>
-      </section>
-      <section>
-        <SectionHeader
-          header="Oferta Académica"
-          content="Todos los cursos de este programa son incluyentes, en cuánto a
-						género, niveles de escolaridad, edad, para que todos los
-						trabajadores tengan las mismas posibilidades de capacitarse."
-        />
-      </section>
-      <section>
-        <div className={styles.subjectsContent}>
-          <SubjectCard
-            title="DISEÑO Y DESARROLLO WEB"
-            content="Centro de Cómputo Mac en el que se pueden desarrollar temas como 
-						diseño gráfico y web, desarrollo videojuegos, e incluso aplicaciones de 
-						ofimática como Excel, PowerPoint y Word."
-            image={<img src="img/home/subject/subject-coding.png" />}
-            contextImage={<img src="img/home/areas/web.jpg" />}
-          />
-          <SubjectCard
-            title="SERVICIOS DE BELLEZA Y ESTÉTICA"
-            content="Dos amplios salones acondicionados y equipados para realizar 
-						cursos de toda la gama de la cosmetología (maquillaje, corte de cabello, 
-						aplicación de acrílicos y químicos, manicure y pedicure, entre otros), 
-						en los que se puede atender a varios grupos simultáneamente."
-            image={<img src="img/home/subject/subject-nails.png" />}
-            contextImage={<img src="img/home/areas/stylist.jpg" />}
-          />
-          <SubjectCard
-            title="ELECTRICIDAD Y ELECTRÓNICA"
-            content="Edificio de energías renovables con tres aulas especialmente 
-						diseñadas y totalmente equipadas para atender simultáneamente a 
-						varios grupos de estudiantes."
-            image={<img src="img/home/subject/subject-electric.png" />}
-            contextImage={<img src="img/home/areas/electronics.jpg" />}
-          />
-          <SubjectCard
-            title="HERRAMIENTAS DE OFIMÁTICA"
-            content="Para la que se dispone de tres aulas completamente equipadas 
-						con computadoras con Windows 10 y la versión 2016 de MSWord, Excel y PowerPoint."
-            image={<img src="img/home/subject/subject-office.png" />}
-            contextImage={<img src="img/home/areas/office.jpg" />}
-          />
-        </div>
-        <div className={styles.subjectsCta}>
-          <button>Ver lista de cursos</button>
-        </div>
-      </section>
-    </main>
+    <Layout>
+      <main>
+        <title>Home Page</title>
+        <section className={styles.hero}>
+          <div className={styles.carouselContainer}>
+            <Carousel images={getImages()} />
+          </div>
+          <div>
+            <h2>{title}</h2>
+            <Separator />
+            <p>{titleDescription}</p>
+            <button onClick={() => navigate("/oferta-academica")}>
+              Explorar oferta académica
+            </button>
+          </div>
+        </section>
+        <section>
+          <SectionHeader header="Misión y Visión" />
+        </section>
+        <section>
+          <div className={styles.missionContent}>
+            <InfoCard
+              cardImage={<img src="img/home/mission/info-mission.jpg" />}
+              title={mission.title}
+              content={mission.content}
+              callToActionTitle="Contáctanos"
+              callToActionRoute="/contacto"
+            />
+            <InfoCard
+              cardImage={<img src="img/home/mission/info-vision.jpg"></img>}
+              title={vision.title}
+              content={vision.content}
+              callToActionTitle="Aprender más"
+              callToActionRoute="/quienes-somos"
+            />
+          </div>
+        </section>
+        <section>
+          <SectionHeader header={academicOffer.title} content={academicOffer.content} />
+        </section>
+        <section>
+          <div className={styles.subjectsContent}>
+            <SubjectCard
+              title={subjectWebDesign.title}
+              content={subjectWebDesign.content}
+              image={<img src="img/home/subject/subject-coding.png" />}
+              contextImage={<img src="img/home/areas/web.jpg" />}
+            />
+            <SubjectCard
+              title={subjectBeauty.title}
+              content={subjectBeauty.content}
+              image={<img src="img/home/subject/subject-nails.png" />}
+              contextImage={<img src="img/home/areas/stylist.jpg" />}
+            />
+            <SubjectCard
+              title={subjectElectricity.title}
+              content={subjectElectricity.content}
+              image={<img src="img/home/subject/subject-electric.png" />}
+              contextImage={<img src="img/home/areas/electronics.jpg" />}
+            />
+            <SubjectCard
+              title={subjectOffice.title}
+              content={subjectOffice.content}
+              image={<img src="img/home/subject/subject-office.png" />}
+              contextImage={<img src="img/home/areas/office.jpg" />}
+            />
+          </div>
+          <div className={styles.subjectsCta}>
+            <button>Ver lista de cursos</button>
+          </div>
+        </section>
+      </main>
+    </Layout>
   );
 };
 
@@ -147,10 +117,12 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         mission={frontmatter.mission}
         vision={frontmatter.vision}
-        carouselImageOne={frontmatter.carouselImageOne}
-        carouselImageTwo={frontmatter.carouselImageTwo}
-        carouselImageThree={frontmatter.carouselImageThree}
         titleDescription={frontmatter.titleDescription}
+        academicOffer={frontmatter.academicOffer}
+        subjectWebDesign={frontmatter.subjectWebDesign}
+        subjectBeauty={frontmatter.subjectBeauty}
+        subjectElectricity={frontmatter.subjectElectricity}
+        subjectOffice={frontmatter.subjectOffice}
       />
     </Layout>
   );
@@ -316,27 +288,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         titleDescription
-        carouselImageOne {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        carouselImageTwo {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        carouselImageThree {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         mission {
           title
           content
@@ -345,26 +296,25 @@ export const pageQuery = graphql`
           title
           content
         }
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+        academicOffer {
+          title
+          content
         }
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
+        subjectWebDesign {
+          title
+          content
+        }
+        subjectBeauty {
+          title
+          content
+        }
+        subjectElectricity {
+          title
+          content
+        }
+        subjectOffice {
+          title
+          content
         }
       }
     }

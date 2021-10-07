@@ -37,11 +37,13 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Title, name: title, widget: string}
           - {label: TitleDescription, name: titleDescription, widget: string}
-          - {label: CarouselImageOne, name: carouselImageOne, widget: image}
-          - {label: CarouselImageTwo, name: carouselImageTwo, widget: image}
-          - {label: CarouselImageThree, name: carouselImageThree, widget: image}
           - {label: Mission, name: mission, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Content, name: content, widget: string}]}
           - {label: Vision, name: vision, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Content, name: content, widget: string}]}
+          - {label: AcademicOffer, name: academicOffer, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Content, name: content, widget: string}]}
+          - {label: SubjectWebDesign, name: subjectWebDesign, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Content, name: content, widget: string}]}
+          - {label: SubjectBeauty, name: subjectBeauty, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Content, name: content, widget: string}]}
+          - {label: SubjectElectricity, name: subjectElectricity, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Content, name: content, widget: string}]}
+          - {label: SubjectOffice, name: subjectOffice, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Content, name: content, widget: string}]}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
