@@ -1,115 +1,116 @@
-import React from 'react'
-import { navigate } from 'gatsby-link'
-import Layout from '../../components/Layout'
+import React from "react";
+import { Layout } from "../../components/BetterLayout";
+import { Separator } from "../../components/Separator";
 
-function encode(data) {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
+import * as styles from "../../css/contactPage/contactPage.module.scss";
 
-export default class Index extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { isValidated: false }
-  }
+const ContactUs = () => {
+	return (
+		<Layout>
+			<section className={styles.contactHeader} style={{paddingTop: '64px'}}>
+				<h2>Contáctanos</h2>
+				<Separator />
+				<p>Contáctanos por medio del formulario de contacto a continuación</p>
+			</section>
+			<section>
+				<form
+					method='post'
+					data-netlify='true'
+					className={styles.contactForm}
+					id='contactForm'
+				>
+					<section>
+						<input
+							style={{ position: "absolute" }}
+							type='hidden'
+							name='form-name'
+							value='contactForm'
+						/>
+						<div className={styles.nameEmail}>
+							<div className={styles.formField}>
+								<label for='name'>Nombre completo</label>
+								<input
+									type='text'
+									id='name'
+									placeholder='Nombre completo'
+									name='name'
+								/>
+							</div>
+							<div className={styles.formField}>
+								<label for='email'>Correo electrónico</label>
+								<input
+									type='email'
+									placeholder='Correo electrónico'
+									name='email'
+									id='email'
+								/>
+							</div>
+						</div>
+						<div className={styles.formField}>
+							<label for='phone'>
+								Número de teléfono (en el formato de 2222 3333):{" "}
+							</label>
+							<input
+								type='tel'
+								placeholder='Ejemplo: 0011 1212'
+								name='phone'
+								id='phone'
+								pattern='[0-9]{4} [0-9]{4}'
+								maxLength='9'
+							/>
+						</div>
+						<div className={styles.formField}>
+							<label for='howDidYouKnowUs'>
+								¿Cómo llegaste a conocer del Centro Educativo?
+							</label>
+							<select name='howDidYouKnowUs' form='contactForm'>
+								<option value='Redes sociales'>Por redes sociales</option>
+								<option value='Amigos o Familia'>
+									Por amigos o familiares
+								</option>
+								<option value='Perifoneo'>Perifoneo</option>
+								<option value='Vallas en vía pública'>
+									Vallas en vía pública
+								</option>
+								<option value='Otro'>Otros</option>
+							</select>
+						</div>
+						<div className={styles.formField}>
+							<label for='areasOfInterest'>
+								Qué áreas de la formación profesional te interesan más:
+							</label>
+							<select name='areasOfInterest' form='contactForm'>
+								<option value='Electricidad y electrónica'>
+									Electricidad y electrónica
+								</option>
+								<option value='Ofimática'>Ofimática</option>
+								<option value='Diseño y desarrollo WEB'>
+									Diseño y desarrollo WEB
+								</option>
+								<option value='Belleza y estética'>Belleza y estética</option>
+								<option value='Otro'>Otros</option>
+							</select>
+						</div>
+					</section>
+					<section>
+						<div className={styles.formField}>
+							<label for='comment'>Escribe tu consulta:</label>
+							<textarea
+								id='comment'
+								name='comment'
+								rows='15'
+								cols='33'
+							></textarea>
+						</div>
+						<div data-netlify-recaptcha='true'></div>
+						<section className={styles.submitForm}>
+							<button type='submit'>Enviar</button>
+						</section>
+					</section>
+				</form>
+			</section>
+		</Layout>
+	);
+};
 
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
-
-  handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
-    })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch((error) => alert(error))
-  }
-
-  render() {
-    return (
-      <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1>Contact</h1>
-              <form
-                name="contact"
-                method="post"
-                action="/contact/thanks/"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                onSubmit={this.handleSubmit}
-              >
-                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <input type="hidden" name="form-name" value="contact" />
-                <div hidden>
-                  <label>
-                    Don’t fill this out:{' '}
-                    <input name="bot-field" onChange={this.handleChange} />
-                  </label>
-                </div>
-                <div className="field">
-                  <label className="label" htmlFor={'name'}>
-                    Your name
-                  </label>
-                  <div className="control">
-                    <input
-                      className="input"
-                      type={'text'}
-                      name={'name'}
-                      onChange={this.handleChange}
-                      id={'name'}
-                      required={true}
-                    />
-                  </div>
-                </div>
-                <div className="field">
-                  <label className="label" htmlFor={'email'}>
-                    Email
-                  </label>
-                  <div className="control">
-                    <input
-                      className="input"
-                      type={'email'}
-                      name={'email'}
-                      onChange={this.handleChange}
-                      id={'email'}
-                      required={true}
-                    />
-                  </div>
-                </div>
-                <div className="field">
-                  <label className="label" htmlFor={'message'}>
-                    Message
-                  </label>
-                  <div className="control">
-                    <textarea
-                      className="textarea"
-                      name={'message'}
-                      onChange={this.handleChange}
-                      id={'message'}
-                      required={true}
-                    />
-                  </div>
-                </div>
-                <div className="field">
-                  <button className="button is-link" type="submit">
-                    Send
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </section>
-      </Layout>
-    )
-  }
-}
+export default ContactUs;

@@ -53,7 +53,7 @@ export const Navbar = () => {
 									<Link to='/quienes-somos'>Quiénes Somos</Link>
 								</li>
 								<li>
-									<Link to='/contacto'>Contacto</Link>
+									<Link to='contact'>Contacto</Link>
 								</li>
 							</ul>
 							<section className={styles.sideNavLogos}>
@@ -88,7 +88,7 @@ export const Navbar = () => {
 					<Link to='/quienes-somos'>Quiénes Somos</Link>
 				</li>
 				<li>
-					<Link to='/contacto'>Contacto</Link>
+					<Link to='/contact'>Contacto</Link>
 				</li>
 			</ul>
 			<img src='img/navbar/logo-salesiano.png' />

@@ -97,7 +97,6 @@ export const FaqPageTemplate = ({ title }) => {
 }
 
 const FaqPage = ({ data }) => {
-  // const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
