@@ -1,5 +1,5 @@
 ---
-templateKey: 'sobre-nosotros'
+templateKey: 'quienes-somos'
 path: /quienes-somos
 title: Quiénes Somos
 titleDescription: Somos una Comunidad Educativa Pastoral, inspirada en el carisma de San Juan Bosco. El Centro de Formación Salesiano San José propone una educación en valores que acompaña todos los proyectos de formación técnica orientada a jóvenes que desean superarse a través de la educación formal.
