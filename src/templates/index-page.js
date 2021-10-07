@@ -4,7 +4,7 @@ import { Link, graphql, navigate } from "gatsby";
 
 import Carousel from "../components/Carousel";
 import { InfoCard } from "../components/InfoCard";
-import {Layout} from "../components/BetterLayout";
+import { Layout } from "../components/BetterLayout";
 import { SectionHeader } from "../components/SectionHeader";
 import { Separator } from "../components/Separator";
 import { SubjectCard } from "../components/SubjectCard";
@@ -15,6 +15,12 @@ import * as styles from "../css/homePage/homePage.module.scss";
 export const IndexPageTemplate = ({
   image,
   title,
+  titleDescription,
+  carouselImageOne,
+  carouselImageTwo,
+  carouselImageThree,
+  mission,
+  vision,
   heading,
   subheading,
   mainpitch,
@@ -23,9 +29,9 @@ export const IndexPageTemplate = ({
 }) => {
   const getImages = () => {
     return [
-      <img src="/img/home/carousel/carousel-1.jpg" alt="" />,
-      <img src="/img/home/carousel/carousel-2.jpg" alt="" />,
-      <img src="/img/home/carousel/carousel-3.jpg" alt="" />,
+      <img src={carouselImageOne} alt="" />,
+      <img src={carouselImageTwo} alt="" />,
+      <img src={carouselImageThree} alt="" />,
     ];
   };
 
@@ -37,13 +43,9 @@ export const IndexPageTemplate = ({
           <Carousel images={getImages()} />
         </div>
         <div>
-          <h2>Nos mueve la esperanza</h2>
+          <h2>{title}</h2>
           <Separator />
-          <p>
-            El Centro de Formación Profesional Salesiano San José, cuenta con
-            una moderna infraestructura que le permite desarrollar una oferta
-            formativa, mediante la implementación de cursos prácticos.
-          </p>
+          <p>{titleDescription}</p>
           <button onClick={() => navigate("/oferta-academica")}>
             Explorar oferta académica
           </button>
@@ -56,21 +58,15 @@ export const IndexPageTemplate = ({
         <div className={styles.missionContent}>
           <InfoCard
             cardImage={<img src="img/home/mission/info-mission.jpg" />}
-            title="Misión"
-            content="Inspirados en San Juan Bosco, somos un Centro de Formación Profesional 
-							de vanguardia con un ambiente educativo alegre, flexible y pertinente para atender 
-							la formación profesional y humana, y crear oportunidades para la inserción laboral 
-							de personas jóvenes y adultas, preferentemente en riesgo social"
+            title={mission.title}
+            content={mission.content}
             callToActionTitle="Contáctanos"
             callToActionRoute="/contacto"
           />
           <InfoCard
             cardImage={<img src="img/home/mission/info-vision.jpg"></img>}
-            title="Visión"
-            content="Ser un Centro de Formación Profesional dinámico, sustentable e innovador 
-							con equipo docente certificado y altos estándares de calidad que forma 
-							competitivamente e inserta laboralmente en condiciones dignas a los 
-							jóvenes y adultos que atendemos"
+            title={vision.title}
+            content={vision.content}
             callToActionTitle="Aprender más"
             callToActionRoute="/quienes-somos"
           />
@@ -304,6 +300,18 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
+        titleDescription
+        carouselImageOne
+        carouselImageTwo
+        carouselImageThree
+        mission {
+          title
+          content
+        }
+        vision {
+          title
+          content
+        }
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
