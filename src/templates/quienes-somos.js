@@ -24,13 +24,17 @@ export const AboutPageTemplate = ({ title, titleDescription, continuousLearning,
 				<section>
 					<h3>Programa de Formación Continua</h3>
 					<Separator />
-					{continuousLearning.content}
+					<p>{continuousLearning.partOne}</p>
+					<p>{continuousLearning.partTwo}</p>
+					<p>{continuousLearning.partThree}</p>
 				</section>
 				<section className={styles.aboutSection}>
 					<div>
 						<h3>Ambiente</h3>
 						<Separator />
-						{ambient.content}
+						<p>{ambient.partOne}</p>
+						<p>{ambient.partTwo}</p>
+						<p>{ambient.partThree}</p>
 					</div>
 					<img src='img/about/about-1.jpg' />
 				</section>
@@ -60,9 +64,9 @@ const AboutPage = ({ data }) => {
   )
 }
 
-AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
+// AboutPage.propTypes = {
+//   data: PropTypes.object.isRequired,
+// }
 
 export default AboutPage
 

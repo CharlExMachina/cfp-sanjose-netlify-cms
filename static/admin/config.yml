@@ -59,8 +59,8 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "quienes-somos"}
           - {label: Title, name: title, widget: string}
           - {label: TitleDescription, name: titleDescription, widget: string}
-          - {label: ContinuousLearning, name: continuousLearning, widget: object, fields: [{label: Content, name: content, widget: text}]}
-          - {label: Ambient, name: ambient, widget: object, fields: [{label: Content, name: content, widget: text}]}
+          - {label: ContinuousLearning, name: continuousLearning, widget: object, fields: [{label: ParagraphOne, name: partOne, widget: text}, {label: ParagraphTwo, name: partTwo, widget: text}, {label: ParagraphThree, name: partThree, widget: text}]}
+          - {label: Ambient, name: ambient, widget: object, fields: [{label: ParagraphOne, name: partOne, widget: text}, {label: ParagraphTwo, name: partTwo, widget: text}, {label: ParagraphThree, name: partThree, widget: text}]}
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
