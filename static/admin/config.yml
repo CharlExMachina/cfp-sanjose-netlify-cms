@@ -44,6 +44,14 @@ collections:
           - {label: SubjectBeauty, name: subjectBeauty, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Content, name: content, widget: string}]}
           - {label: SubjectElectricity, name: subjectElectricity, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Content, name: content, widget: string}]}
           - {label: SubjectOffice, name: subjectOffice, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Content, name: content, widget: string}]}
+      - file: "src/pages/ofertaAcademica/index.md"
+        label: "Oferta Academica"
+        name: "oferta-academica"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "oferta-academica"}
+          - {label: Title, name: title, widget: string}
+          - {label: TitleDescription, name: titleDescription, widget: string}
+          - {label: FreeCourses, name: freeCourses, widget: object, fields: [{label: Courses, name: courses, widget: list, fields: [{label: Title, name: title, widget: string}, {label: CostTitle, name: costTitle, widget: text}, {label: CourseFeatures, name: courseFeatures, widget: list, fields: [{label: FeatureName, name: featureName, widget: string}]}]}]}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
