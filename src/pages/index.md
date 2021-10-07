@@ -3,7 +3,7 @@ templateKey: index-page
 title: Great coffee with a conscience
 image: /img/home-jumbotron.jpg
 heading: HELLO Las Vegas!!!!
-subheading: Support sustainable farming while enjoying a cup
+subheading: NO LO SE RICK
 mainpitch:
   title: Why Kaldi
   description: >
