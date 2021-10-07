@@ -21,7 +21,6 @@ export const IndexPageTemplate = ({
   carouselImageThree,
   mission,
   vision,
-  description,
   intro,
 }) => {
   const getImages = () => {
@@ -128,10 +127,6 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
         mission={frontmatter.mission}
         vision={frontmatter.vision}
         carouselImageOne={frontmatter.carouselImageOne}
@@ -340,13 +335,6 @@ export const pageQuery = graphql`
             }
           }
         }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
         intro {
           blurbs {
             image {

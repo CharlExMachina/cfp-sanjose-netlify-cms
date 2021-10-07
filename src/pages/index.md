@@ -11,10 +11,6 @@ mission:
 vision:
   title: Visión
   content: Ser un Centro de Formación Profesional dinámico, sustentable e innovador con equipo docente certificado y altos estándares de calidad que forma competitivamente e inserta laboralmente en condiciones dignas a los jóvenes y adultos que atendemos.
-description: Kaldi is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
 intro:
   blurbs:
     - image: /img/coffee.png
