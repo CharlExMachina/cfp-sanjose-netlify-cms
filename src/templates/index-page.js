@@ -21,9 +21,6 @@ export const IndexPageTemplate = ({
   carouselImageThree,
   mission,
   vision,
-  heading,
-  subheading,
-  mainpitch,
   description,
   intro,
 }) => {
@@ -135,6 +132,12 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
+        mission={frontmatter.mission}
+        vision={frontmatter.vision}
+        carouselImageOne={frontmatter.carouselImageOne}
+        carouselImageTwo={frontmatter.carouselImageTwo}
+        carouselImageThree={frontmatter.carouselImageThree}
+        titleDescription={frontmatter.titleDescription}
         intro={frontmatter.intro}
       />
     </Layout>
