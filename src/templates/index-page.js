@@ -13,7 +13,6 @@ import * as styles from "../css/homePage/homePage.module.scss";
 
 // markup
 export const IndexPageTemplate = ({
-  image,
   title,
   titleDescription,
   carouselImageOne,
@@ -21,13 +20,12 @@ export const IndexPageTemplate = ({
   carouselImageThree,
   mission,
   vision,
-  intro,
 }) => {
   const getImages = () => {
     return [
-      <img src={carouselImageOne} alt="" />,
-      <img src={carouselImageTwo} alt="" />,
-      <img src={carouselImageThree} alt="" />,
+      <img src={carouselImageOne.childImageSharp.fluid.src} alt="" />,
+      <img src={carouselImageTwo.childImageSharp.fluid.src} alt="" />,
+      <img src={carouselImageThree.childImageSharp.fluid.src} alt="" />,
     ];
   };
 
@@ -125,7 +123,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
         title={frontmatter.title}
         mission={frontmatter.mission}
         vision={frontmatter.vision}
@@ -133,7 +130,6 @@ const IndexPage = ({ data }) => {
         carouselImageTwo={frontmatter.carouselImageTwo}
         carouselImageThree={frontmatter.carouselImageThree}
         titleDescription={frontmatter.titleDescription}
-        intro={frontmatter.intro}
       />
     </Layout>
   );
