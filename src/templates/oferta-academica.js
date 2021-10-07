@@ -27,7 +27,7 @@ export const OfertaAcademicaTemplate = ({
       {freeCourses.courses.map((course) => (
         <section className={styles.autocad}>
           <SectionHeader header={course.title} />
-          <h4>{course.costTitle}</h4>
+          <h4><strong>{course.costTitle}</strong></h4>
           <div className={styles.designClassContent}>
             <ul>
               {course.courseFeatures.map((courseFeature) => <li>{courseFeature.featureName}</li>)}
