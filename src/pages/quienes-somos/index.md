@@ -9,11 +9,11 @@ titleDescription: Somos una Comunidad Educativa Pastoral, inspirada en el
 continuousLearning:
   partOne: Este es un programa de INSAFORP que atiende a los trabajadores de los
     diferentes niveles organizacionales de empresas cotizantes al Sistema de
-    Formación Profesional.\nTodos los cursos de este programa son incluyentes,
-    en cuánto a género, niveles de escolaridad, edad, para que todos los
-    trabajadores tengan las mismas posibilidades de capacitarse.\n
+    Formación Profesional. Todos los cursos de este programa son incluyentes, en
+    cuánto a género, niveles de escolaridad, edad, para que todos los
+    trabajadores tengan las mismas posibilidades de capacitarse.
   partTwo: El financiamiento del INSAFORP al costo de la capacitación de los
-    participantes es del 100%.\nActualmente dentro de este programa impartimos
+    participantes es del 100%. Actualmente dentro de este programa impartimos
     cursos en el área de ofimática Word, PowerPoint, Excel (Niveles Básico,
     Intermedio, Avanzado y Excel para financieros).
   partThree: Cada módulo tiene una duración de 20 horas. En el 2020 se incorpora
