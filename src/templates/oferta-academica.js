@@ -58,7 +58,7 @@ export default OfertaAcademica;
 
 export const pageQuery = graphql`
   query OfertaAcademica {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "oferta-academica" } }) {
       frontmatter {
         title
         titleDescription
