@@ -77,10 +77,14 @@ export const aboutPageQuery = graphql`
         title
         titleDescription
         continuousLearning {
-          content
+          partOne
+          partTwo
+          partThree
         }
         ambient {
-          content
+          partOne
+          partTwo
+          partThree
         }
       }
     }
