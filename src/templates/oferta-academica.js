@@ -57,7 +57,7 @@ const OfertaAcademica = ({ data }) => {
 export default OfertaAcademica;
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
+  query OfertaAcademica {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
