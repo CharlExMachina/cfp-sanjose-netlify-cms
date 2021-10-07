@@ -304,9 +304,27 @@ export const pageQuery = graphql`
       frontmatter {
         title
         titleDescription
-        carouselImageOne
-        carouselImageTwo
-        carouselImageThree
+        carouselImageOne {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        carouselImageTwo {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        carouselImageThree {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         mission {
           title
           content
