@@ -5,7 +5,7 @@ titleDescription: El Centro de Formación Profesional Salesiano San José, cuent
   con una moderna infraestructura que le permite desarrollar una oferta
   formativa, mediante la implementación de cursos prácticos.
 mission:
-  title: Nisión
+  title: Misión
   content: Inspirados en San Juan Bosco, somos un Centro de Formación Profesional
     de vanguardia con un ambiente educativo alegre, flexible y pertinente para
     atender la formación profesional y humana, y crear oportunidades para la
