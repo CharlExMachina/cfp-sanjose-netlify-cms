@@ -44,7 +44,7 @@ collections:
           - {label: SubjectBeauty, name: subjectBeauty, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Content, name: content, widget: string}]}
           - {label: SubjectElectricity, name: subjectElectricity, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Content, name: content, widget: string}]}
           - {label: SubjectOffice, name: subjectOffice, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Content, name: content, widget: string}]}
-      - file: "src/pages/ofertaAcademica/index.md"
+      - file: "src/pages/oferta-academica/index.md"
         label: "Oferta Academica"
         name: "oferta-academica"
         fields:
